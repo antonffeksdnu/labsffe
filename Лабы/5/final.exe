@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+#include<Windows.h>
+using namespace std;
+int main() {
+
+	double x, xn, xk, shag, y;
+	
+	cout << "Vvedite xn, xk, shag \n";
+	cin >> xn >> xk >> shag;
+	
+
+	cout << "|-----------|-----------------|\n";
+	cout << "|     x     |         y       |\n";
+	cout << "|-----------|-----------------|\n";
+
+	for (x = xn; x <= xk; x += shag) {
+		if (x <= 0) y = pow(x, 3);
+		else if (x > 10) y = sqrt(x);
+		else y = 5.7 - 2 * sqrt(x);
+		cout<<"|   "<< setw(8)<<x<< "| " << setw(15) << y << " |\n";
+	}
+	cout << "|-----------|-----------------|\n";
+	return 0;
+}

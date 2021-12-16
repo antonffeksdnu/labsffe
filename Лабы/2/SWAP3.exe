@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+#define pi 3.14159 //определение константы
+int main ()
+{
+double R, h, p, S, V, m; //описание переменных
+cout<<"R=";
+cin>>R;
+cout<<"h=";
+cin>>h;
+cout<<"p=";
+cin>>p;
+S=pi*R*R; //расчет площади
+V=pi*R*R*h; //вычисление объема
+m=p*V; //определение массы
+cout<<"S="<<S; //вывод на экран значения переменной S
+cout<<"\n V="<<V; //перенос на новую строку и вывод на экран V
+cout<<"\n m="<<m<<"\n";
+system ("pause");
+return 0;
+}

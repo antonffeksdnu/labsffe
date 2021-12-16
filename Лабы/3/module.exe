@@ -1,0 +1,34 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+ 
+class Okr
+{
+public:
+  Okr(void){};
+  ~Okr(void){};
+  void vvod(){ cin >> r;}
+  void vivod(){cout << r << endl;}
+  const Okr operator-(const Okr&O);
+private:
+  double r;
+};
+ 
+const Okr Okr::operator-(const Okr&O)
+{
+    Okr P(*this);
+        P.r=fabs(P.r-O.r);
+        return P;
+}
+ 
+int main(void)
+{      
+  Okr A,B,C;
+  A.vvod();
+  B.vvod();
+  C=A-B;
+  A.vivod();
+  B.vivod();
+  C.vivod();
+  return 0;
+}

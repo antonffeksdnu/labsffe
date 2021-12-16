@@ -1,0 +1,23 @@
+#include <iostream>
+ 
+template <typename Type>
+Type factorial (Type n)
+{
+    if (n == 0)
+         return 1;
+    else if (n < 0)
+         return -1;
+    Type ret_val = 1;
+    for (Type i=1; i<=n; i++)
+         ret_val *= i;
+    return ret_val;
+}
+ 
+int main ()
+{
+    long long ll = factorial<long long> (20); // <= 20
+    std::cout << "100! = " << ll;
+    
+    std::cin.get ();
+    return 0;
+}
